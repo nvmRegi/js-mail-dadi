@@ -3,17 +3,34 @@ mailUtente = mailUtente.toLowerCase();
 
 let listaEmail = ["matteo@gmail.com", "fabio@gmail.com", "pietro@gmail.com", "anna@gmail.com"];
 
-let i = 0;
-bool = true;
+for(let i = 0; i < listaEmail.length; i++){
+    console.log(listaEmail[i]);
+}
+
+
+//Verifica con DoWhile
+/*let i = 0;
+let bool = true;
 
 do{
-    if(mailUtente == listaEmail){
+    if(mailUtente == listaEmail[i]){
         console.log("L'utente può accedere al Gioco dei Dadi.");
         bool = false;
     }else{
         i++;
     }
-}while(bool || i < listaEmail.length)
+}while(bool || i < listaEmail.length)*/
+
+
+//Verifica con for
+let bool = true;
+
+for(let i = 0; i < listaEmail.length || bool; i++){
+    if(mailUtente == listaEmail[i]){
+        console.log("L'utente può accedere al Gioco dei Dadi.");
+        bool = false;
+    }
+}
 
 if(bool){
     console.log("L'utente non può accedere al Gioco dei Dadi");
