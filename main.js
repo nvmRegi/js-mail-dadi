@@ -19,13 +19,16 @@ do{
     }else{
         i++;
     }
-}while(bool || i < listaEmail.length)*/
+}while(bool && i < listaEmail.length)*/
 
 
 //Verifica con for
 let bool = true;
 
-for(let i = 0; i < listaEmail.length || bool; i++){
+for(let i = 0; i < listaEmail.length && bool; i++){
+
+    console.log(listaEmail[i]);
+
     if(mailUtente == listaEmail[i]){
         console.log("L'utente può accedere al Gioco dei Dadi.");
         bool = false;
@@ -33,7 +36,7 @@ for(let i = 0; i < listaEmail.length || bool; i++){
 }
 
 if(bool){
-    console.log("L'utente non può accedere al Gioco dei Dadi");
+    console.log("L'utente non può accedere al Gioco dei Dadi.");
 }else{
 
     //Funzione per generare un numero random da 1 a 6
